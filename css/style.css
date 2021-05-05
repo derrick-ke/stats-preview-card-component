@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: hsl(0, 0%, 100%);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(233, 47%, 7%);
+  height: 100vh;
+}
+
+.card__box {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card__box--info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.info__wrapper {
+  width: 80%;
+  margin: 30px 0;
+  padding: 1.5rem;
+}
+
+.card__title {
+  padding: 15px 0;
+}
+
+.card__title--highlight {
+  color: hsl(277, 64%, 61%);
+}
+
+.card__description {
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.8;
+  font-size: 0.9rem;
+}
+
+.card__box--img {
+  width: 100%;
+  background-color: aqua;
+  background: linear-gradient(
+      hsla(277, 64%, 61%, 0.4),
+      hsla(277, 64%, 61%, 0.4)
+    ),
+    linear-gradient(hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 0%, 0.5)),
+    url('../images/image-header-desktop.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.card__stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  padding-left: 0;
+  margin: 4rem 0 0 0;
+}
+
+.card__stat {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.card_stat--dark {
+  display: block;
+  color: hsla(0, 0%, 100%, 0.6);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.attribution {
+  display: block;
+  margin-top: 1rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 800px) {
+  .card__box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info__wrapper{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card__stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 2rem;
+  }
+
+  .card__stat {
+    margin-top: 1.5rem;
+  }
+}
